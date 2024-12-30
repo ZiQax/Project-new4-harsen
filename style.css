@@ -81,7 +81,7 @@ body {
 
 @media (max-width : 600px) {
     #user-menu {
-        width: 99vw;
+        width: 100vw;
 
     }
 }
