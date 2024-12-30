@@ -11,13 +11,12 @@ function getCurrentDate() {
     const year = today.getFullYear();
     return `${day} ${month} ${year};`
 }
-
 function addToDo() {
     const textToDo = inputItems.value.trim();
     const category = catName.value;
     const date = getCurrentDate();
 
-}
+
 
 if (textToDo === ""){
     alert("masukan todo list anda");
@@ -37,6 +36,9 @@ li.appendChild(chk);
 li.appendChild(resultSpan);
 items.appendChild(li);
 
-inputItems.value= "";
 
-addButton.addEventListener('click', addToDo);
+inputItems.value= "";
+}
+
+addButton.addEventListener("click", addToDo);
+
