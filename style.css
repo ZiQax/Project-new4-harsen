@@ -73,7 +73,9 @@ body {
     position: relative;
     top: -40px;
     left: 46vw;
-}#container > #category > #catName {
+}
+
+#container > #category > #catName {
     padding: 5px;
     border-radius : 5px;
     height: 32px;
@@ -87,4 +89,25 @@ body {
     #container {
      margin-left: 0px;
      padding: 10px;
+     width: 90vw;
+
+}
+ #container > h2 {
+    text-align: center;
+    font-size: 17px;;
+ }
+
+ #container > input {
+    width: 100%;
+    height: 20px;
+ }
+
+ #container > #category {
+    top : 0px;
+    left : 0px;
+ }
+
+ #container > #category > #catname {
+    width: 100%;
+ }
 }
