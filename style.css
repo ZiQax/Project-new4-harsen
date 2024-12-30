@@ -82,6 +82,9 @@ body {
 @media (max-width : 600px) {
     #user-menu {
         width: 108vw;
-
     }
+
+    #container {
+     margin-left: 0px;
+     padding: 10px;
 }
