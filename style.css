@@ -86,7 +86,6 @@ body {
     }
 
     #container {
-     margin-left: 0px;
      width: 100vw;
      left: -40px;
      padding: 10px;
@@ -100,6 +99,7 @@ body {
  #container > input {
     width: 90%;
     height: 20px;
+    margin-left: 0px;
  }
 
  #container > #category {
