@@ -21,24 +21,30 @@ function addToDo() {
 if (textToDo === ""){
     alert("masukan todo list anda");
     return;
-}
+}else{
 
 const li = document.createElement('li');
 li.classList.add(category);
+li.innerHTML = `${textToDo} ${category} ${date}` ;
 
-const chk = document.createElement('input');
-chk.type = "checkbox";
 
 const resultSpan = document.createElement('span');
-resultSpan.textContent = `${textToDo} ${category} ${date}`;
+resultSpan .innerHTML=  "\u00d7";
 
-li.appendChild(chk);
 li.appendChild(resultSpan);
 items.appendChild(li);
 
-
+}
 inputItems.value= "";
+catName.value ="";
 }
 
 addButton.addEventListener("click", addToDo);
 
+items.addEventListener("click",function(e) {
+    if (e.target.tagName === "LI") {
+        e.target.classList.toggle("checked");
+    } else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+    }
+}, false);

@@ -1,117 +1,155 @@
 body {
     font-family: "Poppins", serif;
-    display: grid;
-    grid-template-areas: "header header" "menu content" "footer footer";
-    grid-template-columns: 1fr 3fr;
-    height: 100vh;
-    width: 90vw;
-    gap: 10px;
-    background-color: rgb(33, 37, 37);
     max-width: 1024px;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns:max-content ;
 }
 
 #user-menu {
-    height: 50px;
-    background-color : rgb(56, 65, 68);
-    grid-area : header;
-     width: 97.4vw;
-    position: absolute;
-    top: 0px;
-    left:0px;
+    grid-template-areas: inherit;
+    background-color: rgb(94, 95, 95);
     display: flex;
     justify-content: space-between;
+    width: 98.9vw;
     padding: 10px;
 }
 
 #user-menu > h2 {
-    margin-top: 7px;
     color: white;
-    font-size: 19px;
-    margin-left: 20px;
-    
 }
-#user-menu > h2 > #span-1 {
-    color:rgba(3, 234, 169, 0.785);
-    font-size: 18px;
+
+#user-menu > h2 > span{
+    color: rgb(139, 206, 206);
 }
+
 #user-menu > a {
+    color: rgb(236, 236, 252);
     text-decoration: none;
-    color: rgb(122, 122, 222);
-    font-size: 14px;
-    font-weight: 600;
-    margin-top :10px;
+    font-size: 17px;
+    margin-top: 20px;
+    padding-right: 30px;
 }
 
 #container {
+    background-color: rgb(114, 114, 114);
+    display: flexbox;
+    padding: 20px 50px 20px;
+    flex-direction: column;
     position: relative;
-    top : -100px;
-    grid-area: content;
-    width: 70vw;
-    margin-left:-140px;
-    background-color: rgb(46, 54, 54);
-    border-radius: 5px;
-
+    margin-left: 30rem;
+    top:15vh;
+    width: 90vh;
+    border-radius: 20px;
+    
 }
 
 #container > h2 {
     color: white;
-    margin-top: px;
-    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 30px;
 }
 
 #container > input {
-    width: 100%;
-    height: px;
-    margin-left: 30px;
-    padding: 10px;
-    border-radius: 7px;
+    margin-top: 30px;
+    padding: 20px;
+    width: 70%;
+    border-radius: 20px;
+    border: 1px solid rgba(240, 229, 229, 0.315);
     background-color: transparent;
+    color: beige;
+    -webkit-text-fill-color: rgba(248, 248, 248, 0.678);
 }
 
-#container > #category {
-    padding: 5px;
+#container > input:focus {
+    outline: none;
+}
+
+#category {
+    margin-top: -46px;;
     position: relative;
-    top: -40px;
-    left: 46vw;
+    left: 57vh;
 }
 
-#container > #category > #catName {
-    padding: 5px;
-    border-radius : 5px;
-    height: 32px;
-
+#category > #catName{
+    padding: 19px;
+    border-radius: 20px;
+    background-color: rgb(148, 151, 109);
+    border: 1px solid rgba(255, 255, 255, 0.281);
+    color: white;
+    margin-top: -10px;
+    border: none;
+    cursor: pointer;
 }
 
-@media (max-width : 600px) {
-    #user-menu {
-        width: 108vw;
-    }
-
-    #container {
-     width: 100vw;
-     left: -40px;
-     padding: 15px;
-     margin-left: 5px;
-
+#addButton {
+    position: relative;
+    padding: 12px;
+    top: -47px;
+    left: 70vh;
+    width: 100px;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    background-color: rgb(21, 165, 98);
+    cursor: pointer;
 }
- #container > h2 {
+
+.sect-2 {
+    margin-top: -30px;
+}
+
+
+.sect-2 > ul > li {
+ list-style-type: none;
+  color: aliceblue;
+  margin-left: -30px;
+  width: 100%;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  font-size: 17px;
+  position: relative;
+}
+
+.sect-2 > ul > li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(circle.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+.sect-2 > ul > li.checked {
+    color: darkgoldenrod;
+    text-decoration: line-through;
+}
+
+.sect-2 > ul > li.checked::before {
+    background-image: url(check.png);
+} 
+
+.sect-2 > ul > li > span {
+    position: absolute;
+    right: 0px;
+    left: 85vh;
+    top: 6px;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    color: #ddcbcb;
+    line-height: 40px;
     text-align: center;
-    font-size: 17px;;
- }
+    border-radius: 50%;
+    padding: 10px;
+} 
 
- #container > input {
-    width: 100%;
-    height: 20px;
-    margin-left: 0px;
- }
-
- #container > #category {
-    top : 0px;
-    left : 0px;
-    width: 100%;
- }
-
- #container > #category > #catname {
-    width: 500px;
- }
+.sect-2 > ul > li > span:hover {
+    background-color: rgb(109, 105, 105);
 }
