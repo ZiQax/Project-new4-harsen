@@ -12,7 +12,7 @@ body {
     background-color: rgb(94, 95, 95);
     display: flex;
     justify-content: space-between;
-    width: 98.9vw;
+    width: 100vw;
     padding: 10px;
 }
 
@@ -53,9 +53,9 @@ body {
 
 #container > input {
     margin-top: 30px;
-    padding: 20px;
+    padding: 12px;
     width: 70%;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 1px solid rgba(240, 229, 229, 0.315);
     background-color: transparent;
     color: beige;
@@ -67,14 +67,15 @@ body {
 }
 
 #category {
-    margin-top: -46px;;
+    top: -40px;
     position: relative;
-    left: 57vh;
+    left: 68vh;
+    display: block;
 }
 
 #category > #catName{
-    padding: 19px;
-    border-radius: 20px;
+    padding: 8px;
+    border-radius: 13px;
     background-color: rgb(148, 151, 109);
     border: 1px solid rgba(255, 255, 255, 0.281);
     color: white;
@@ -83,12 +84,11 @@ body {
     cursor: pointer;
 }
 
-#addButton {
+#category > #addButton {
     position: relative;
-    padding: 12px;
-    top: -47px;
-    left: 70vh;
-    width: 100px;
+    padding: 10px;
+    width: 60px;
+    left: 10px;
     border-radius: 6px;
     color: white;
     border: none;
@@ -97,27 +97,33 @@ body {
 }
 
 .sect-2 {
-    margin-top: -30px;
+    margin-top: -20px;
 }
 
 
 .sect-2 > ul > li {
  list-style-type: none;
   color: aliceblue;
-  margin-left: -30px;
+  margin-left: -40px;
   width: 100%;
   padding: 12px 8px 12px 50px;
   user-select: none;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 15px;
   position: relative;
+}
+
+.sect-2 > ul > li:hover {
+    background-color: rgba(144, 150, 149, 0.349);
+    width: 90%;
+    border-radius: 10px;
 }
 
 .sect-2 > ul > li::before {
     content: '';
     position: absolute;
-    height: 28px;
-    width: 28px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     background-image: url(circle.png);
     background-size: cover;
@@ -138,18 +144,15 @@ body {
 .sect-2 > ul > li > span {
     position: absolute;
     right: 0px;
-    left: 85vh;
-    top: 6px;
+    left: 80vh;
+    top: -3px;
     width: 25px;
     height: 25px;
     font-size: 20px;
     color: #ddcbcb;
     line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    padding: 10px;
+    text-align: top;
+    border-radius: 60%;
+    padding: 7px;
 } 
 
-.sect-2 > ul > li > span:hover {
-    background-color: rgb(109, 105, 105);
-}
