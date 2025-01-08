@@ -1,3 +1,20 @@
+const displayUsername = document.getElementById('usernameDisp');
+        const displayJabatan = document.getElementById('jabatanDisp');
+
+        
+        const username = localStorage.getItem('username');
+        const jabatan = localStorage.getItem('jabatan');
+
+        if (username && jabatan) {
+            
+            displayUsername.textContent = `Nama   :  ${username}`;
+            displayJabatan.textContent = `Jabatan :  ${jabatan}`;
+        } else {
+           
+            alert('Data tidak ditemukan!');
+        }
+
+
 const inputItems = document.getElementById("inputItems");
 const catName = document.getElementById("catName");
 const addButton = document.getElementById("addButton");
